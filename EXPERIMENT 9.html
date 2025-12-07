@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #ffffff;   /* FIXED */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 16px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            color: #555;
+            margin: 4px 0;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #007baf;  /* FIXED */
+        }
+
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Responsive Product Grid</h1>
+
+    <div class="grid-container">
+
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRC0Imb8_tm7F_uonV7HB1Js2TZQ4S5RkT0nXlhsiMyXdT89ffeHZwzfZ51EX2wLhb39fDs5tUgOc7STFHWkyKc9YYUCoR3GRk1wN8-XWX55-fNHsoxmHLzAYk" alt="iphone">
+            <h3>Product 1</h3>
+            <p>Experience the next level of performance with the new iPhone.</p>
+            <span class="price">₹82,900</span>
+        </div>
+
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQaXnfVx4Lfpju_mTjIUyViYK5dakZUlr0jE6GRCt5b7yQbIQpp9q-RRDewxF8oTNL4KlWVhsi-K3V_tSeJkzSAllOiz1cBMnvFIKE_TXd6HEOEGYrDDHBWmg" alt="telivision">
+            <h3>Product 2</h3>
+            <p>Experience cinematic clarity with stunning 4K visuals.</p>
+            <span class="price">₹99,499</span>
+        </div>
+
+        <div class="product-card">
+            <img src="https://s3bg.cashify.in/gpro/uploads/2022/02/02205943/apple-macbook-air-mvfm2hn-a-ultrabook-core-i5-8th-gen-8-gb-128-gb-ssd-macos-mojave-front.jpg" alt="macbook">
+            <h3>Product 3</h3>
+            <p>Lightweight. Fast. Perfect for work and creativity.</p>
+            <span class="price">₹59,994</span>
+        </div>
+
+        <div class="product-card">
+            <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQDDQkvaWl8zQxHkbJAKjXS3cmex4jLmOZeemCBG90fckA3TU9IHQeZ4DhwgNwE8nLBZX8E0kjcp84izV6pukZuNUUoqdPxyqIPcKdtXmWiG04HI9j-ie-W" alt="">
+            <h3>Product 4</h3>
+            <p>Home is where the Wi-Fi connects automatically.</p>
+            <span class="price">₹1,599</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
